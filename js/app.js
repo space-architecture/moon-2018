@@ -1,5 +1,6 @@
 import View from './View.js';
 
+const h = window.hyperapp.h;
 const app = window.hyperapp.app;
 
 const router = window.hyperappRouter;

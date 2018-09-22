@@ -7,7 +7,9 @@ export default state => h("div", {}, [
 ]);
 
 const header = () => (
-	h("header", {}, [])
+	h("header", { class: "siteHeader" }, [
+		h()
+	])
 );
 
 const main = () => (
@@ -15,5 +17,7 @@ const main = () => (
 );
 
 const footer = () => (
-	h("footer", {}, [])
+	h("footer", { class: "siteFooter" }, [
+		h("p", { innerHTML: "&copy 2018" })
+	])
 );

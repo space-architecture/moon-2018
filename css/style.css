@@ -13,12 +13,29 @@ body {
 main {
   background: #FFF; }
 
+article {
+  display: grid;
+  grid-template-rows: 3rem;
+  grid-template-columns: 1fr 60rem 1fr; }
+
 .siteHeader {
+  display: grid;
+  grid-template-rows: 3rem;
+  grid-template-columns: 1fr 60rem 1fr;
   color: #FFF; }
+  .siteHeader h1 {
+    grid-row: 1;
+    grid-column: 2;
+    font-size: 1.5rem; }
 
 .siteFooter {
+  display: grid;
+  grid-template-rows: 3rem;
+  grid-template-columns: 1fr 60rem 1fr;
   color: #FFF; }
   .siteFooter p {
+    grid-row: 1;
+    grid-column: 2;
     font-size: 1.5rem; }
 
 /*# sourceMappingURL=style.css.map */

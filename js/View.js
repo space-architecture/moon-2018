@@ -8,7 +8,7 @@ export default state => h("div", {}, [
 
 const header = () => (
 	h("header", { class: "siteHeader" }, [
-		h()
+		h("h1", {}, "宇宙建築 2018")
 	])
 );
 

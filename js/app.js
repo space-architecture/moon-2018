@@ -12,7 +12,7 @@ const application = () => {
 
 	const actions = {};
 
-	const view = View;
+	const view = View();
 
 	const main = app(state, actions, view, document.body);
 };

@@ -1,4 +1,4 @@
-import View from './js/View.js';
+import View from './View.js';
 
 const app = window.hyperapp.app;
 

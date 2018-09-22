@@ -1,18 +1,31 @@
 const h = window.hyperapp.h;
 
-export default state => h("div", {}, [
-	header(),
-	main(),
-	footer()
+const router = window.hyperappRouter;
+const Link = router.Link;
+const Route = router.Route;
+
+export default ({ state }) => h("div", {}, [
+	siteHeader(),
+
+	h(Route, { path: "/", render: h(siteTop, { state: state }, "") }, ""),
+	h(Route, { path: "/:topicId", render: h(siteMain, { state: state }) }, ""),
+
+	siteFooter()
 ]);
 
-const header = () => (
+const siteHeader = () => (
 	h("header", { class: "siteHeader" }, [
-		h("h1", {}, "宇宙建築 2018")
+		h("h1", {}, [
+			h(Link, { to: "/", }, "宇宙建築 2018")
+		])
 	])
 );
 
-const main = () => (
+const siteTop = () => (
+	h("main", {}, "Top")
+);
+
+const siteMain = () => (
 	h("main", {}, [
 		h("article", {}, [
 			h("header", {}, []),
@@ -22,7 +35,7 @@ const main = () => (
 	])
 );
 
-const footer = () => (
+const siteFooter = () => (
 	h("footer", { class: "siteFooter" }, [
 		h("p", { innerHTML: "&copy 2018" })
 	])

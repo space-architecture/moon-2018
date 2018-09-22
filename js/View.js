@@ -13,10 +13,10 @@ const header = () => (
 );
 
 const main = () => (
-	h("main", { innerHTML: marked("## Title") }, [
+	h("main", {}, [
 		h("article", {}, [
 			h("header", {}, []),
-			h("section", {}, []),
+			h("section", { innerHTML: marked("## Title") }, []),
 			h("footer", {}, [])
 		])
 	])

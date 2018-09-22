@@ -1,4 +1,5 @@
-const h = window.hyperapp.h;
+import View from './components/Base.js';
+
 const app = window.hyperapp.app;
 
 window.onload = function () {
@@ -11,11 +12,7 @@ const application = () => {
 
 	const actions = {};
 
-	const view = state => h("div", {}, [
-		h("header", {}, []),
-		h("main", {}, []),
-		h("footer", {}, [])
-	]);
+	const view = View;
 
 	const main = app(state, actions, view, document.body);
 };

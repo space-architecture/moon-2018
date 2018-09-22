@@ -7,8 +7,8 @@ const Route = router.Route;
 export default ({ state }) => h("div", {}, [
 	h(siteHeader, {}),
 
-	h(Route, { path: "/", render: h(siteTop, { state: state }) }),
-	h(Route, { path: "/:topicId", render: h(siteMain, { state: state }) }),
+//	h(Route, { path: "/", render: h(siteTop, { state: state }) }),
+//	h(Route, { path: "/:topicId", render: h(siteMain, { state: state }) }),
 
 	h(siteFooter, {})
 ]);

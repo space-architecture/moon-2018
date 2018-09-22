@@ -5,12 +5,12 @@ const Link = router.Link;
 const Route = router.Route;
 
 export default ({ state }) => h("div", {}, [
-	siteHeader(),
+	h(siteHeader, {}),
 
-	h(Route, { path: "/", render: h(siteTop, { state: state }, "") }, ""),
-	h(Route, { path: "/:topicId", render: h(siteMain, { state: state }) }, ""),
+	h(Route, { path: "/", render: h(siteTop, { state: state }) }),
+	h(Route, { path: "/:topicId", render: h(siteMain, { state: state }) }),
 
-	siteFooter()
+	h(siteFooter, {})
 ]);
 
 const siteHeader = () => (

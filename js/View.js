@@ -13,7 +13,7 @@ const header = () => (
 );
 
 const main = () => (
-	h("main", {}, [])
+	h("main", { innerHTML: marked("## Title") }, [])
 );
 
 const footer = () => (

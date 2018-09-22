@@ -1,8 +1,12 @@
 html {
   margin: 0;
   padding: 0; }
-  html body {
-    font-family: sans-serif;
-    background: #333; }
+
+body {
+  font-family: sans-serif;
+  background: #333; }
+
+main {
+  background: #FFF; }
 
 /*# sourceMappingURL=style.css.map */

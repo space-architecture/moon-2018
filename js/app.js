@@ -11,7 +11,11 @@ const application = () => {
 
 	const actions = {};
 
-	const view = state => h("p", {}, "テスト");
+	const view = state => h("div", {}, [
+		h("header", {}, []),
+		h("main", {}, []),
+		h("footer", {}, [])
+	]);
 
 	const main = app(state, actions, view, document.body);
 };

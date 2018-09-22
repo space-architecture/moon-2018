@@ -1,6 +1,6 @@
 const h = window.hyperapp.h;
 
-export default View = state => h("div", {}, [
+export default = state => h("div", {}, [
 	header(),
 	main(),
 	footer()

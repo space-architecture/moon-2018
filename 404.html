@@ -34,6 +34,8 @@
 			const pathnames = l.pathname.split("/");
 			const subdir = pathnames[0];
 
+			console.log(window.location);
+
 			l.replace(
 				`${ l.protocol }//${ l.hostname }${ port }/${ subdir }/?p=${ pathnames.slice(0, 1).join("/") }`
 			)

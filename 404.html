@@ -36,7 +36,7 @@
 			const pathnames = l.pathname.split("/").slice(1);
 
 			l.replace(
-				`${l.protocol}//${l.hostname}${port}/${ "moon-2018" }/?p=${pathnames.join("/")}`
+				`${ l.protocol }//${ l.hostname }${ port }/${ pathnames[0] }/?p=${ pathnames.slice(1).join("/") }`
 			)
 
 		</script>

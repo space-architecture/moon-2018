@@ -33,14 +33,11 @@
 
 			const l = window.location;
 			const port = l.port ? ':' + l.port : '';
-			const pathnames = l.pathname.split("/");
+			const pathnames = l.pathname.split("/").slice(0, 1 + segmentCount);
 
-
-			console.log(window.location);
-
-//			l.replace(
-//				`${l.protocol}//${l.hostname}${port}/${ "moon-2018" }/?p=${pathnames.slice(0, 1 + segmentCount).join("/")}`
-//			)
+			l.replace(
+				`${l.protocol}//${l.hostname}${port}/${ pathnames[0] }/?p=${pathnames.join("/")}`
+			)
 
 		</script>
 	</body>

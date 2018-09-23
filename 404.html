@@ -27,13 +27,13 @@
 			https://username.github.io/repo-name/one/two?a=b&c=d#qwe becomes
 			https://username.github.io/repo-name/?p=/one/two&q=a=b~and~c=d#qwe
 			Otherwise, leave segmentCount as 0.
+			*/
 
 			var segmentCount = 0;
 
 			let l = window.location;
 			let port = l.port ? ':' + l.port : ''
 
-			*/
 			l.replace(
 				`${l.protocol}//${l.hostname}${port}/?p=${l.pathname.split("/").slice(0, 1 + segmentCount).join("/")}`
 			)

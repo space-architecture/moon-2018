@@ -29,17 +29,13 @@
 			Otherwise, leave segmentCount as 0.
 			*/
 
-			const segmentCount = 0;
-
 			const l = window.location;
 			const port = l.port ? ':' + l.port : '';
 			const pathnames = l.pathname.split("/");
-
-
-			console.log(window.location);
+			const subdir = pathnames[0];
 
 			l.replace(
-				`${l.protocol}//${l.hostname}${port}/${ "moon-2018" }/?p=${pathnames.slice(0, 1 + segmentCount).join("/")}`
+				`${ l.protocol }//${ l.hostname }${ port }/${ subdir }/?p=${ pathnames.slice(0, 1).join("/") }`
 			)
 
 		</script>

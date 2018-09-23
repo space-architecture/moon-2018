@@ -29,6 +29,8 @@
 			Otherwise, leave segmentCount as 0.
 			*/
 
+			const segmentCount = 0;
+
 			const l = window.location;
 			const port = l.port ? ':' + l.port : '';
 			const pathnames = l.pathname.split("/");
@@ -37,7 +39,7 @@
 			console.log(window.location);
 
 			l.replace(
-				`${ l.protocol }//${ l.hostname }${ port }/${ subdir }/?p=${ pathnames.slice(0, 1).join("/") }`
+				`${ l.protocol }//${ l.hostname }${ port }/${ subdir }/?p=${ pathnames.slice(0, 1 + segmentCount).join("/") }`
 			)
 
 		</script>
